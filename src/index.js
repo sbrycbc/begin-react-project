@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Card from './components/card';
+import Collapse from './components/collapse';
 
 //-------------- Erste Unterricht------------//
 
@@ -46,7 +47,7 @@ import Card from './components/card';
 // Props ---> Componentlar arasi veri iletisimini saglar. 
 
 
-const App = () => {
+/* const App = () => {
 
     return (
              <div>
@@ -61,7 +62,50 @@ const App = () => {
                 </div>
             </div>
     );
-}
+} */
+
+//-------------- Vierte Unterricht------------//
+
+//Child Props
+
+const App = () => {
+    return ( 
+        <div>
+            <div className='card-group'>
+
+            <Collapse href="collapseExample">
+                <Card 
+                    cardTitle="Lebenst-Mitteln" 
+                    cardText="Lorem Ipsum Text 1" 
+                    updatedTime=" Last Updated 1 min age"
+                    image="https://picsum.photos/id/42/200/300"
+                    />
+             </Collapse>
+
+             <Collapse href="collapseExample">
+                <Card 
+                    cardTitle="Sport-Luaf"
+                    cardText="Lorem Ipsum Text 2" 
+                    updatedTime=" Last Updated 2 min age"
+                    image="https://picsum.photos/id/156/200/300"
+                    />
+            </Collapse>
+
+            <Collapse href="collapseExample">
+
+                <Card 
+                    cardTitle="Lauf-Verrückt"
+                    cardText="Lorem Ipsum Text 2" 
+                    updatedTime=" Last Updated 3 min age"
+                    image="https://picsum.photos/id/177/200/300"
+                    />
+             </Collapse>
+          
+            </div>
+        </div>
+    );
+};
+
 
 
 
@@ -86,3 +130,4 @@ ReactDOM.render(
     document.getElementById('root')
     //document.querySelector("#root")   
 );
+
