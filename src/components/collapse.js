@@ -5,13 +5,13 @@ const Collapse = (props) => {
     <div>
         <div>
       <a
-        className="btn btn-primary" data-bs-toggle="collapse" href={"#".concat(props.href)} role="button"
+        className="btn btn-primary w-100 mb-2 mt-3" data-bs-toggle="collapse" href={"#".concat(props.href)} role="button"
         aria-expanded="false"
         aria-controls="collapseExample">
         Link with href
       </a>
 
-      <div className="collapse" id={props.href}>
+      <div className="collapse show" id={props.href}>
         {props.children}
       </div>
     </div>

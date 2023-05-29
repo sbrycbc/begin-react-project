@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Card from './components/card';
-import Collapse from './components/collapse';
+import Card from "./components/card";
+import Collapse from "./components/collapse";
 
 //-------------- Erste Unterricht------------//
 
@@ -15,7 +15,6 @@ import Collapse from './components/collapse';
         return <h1>Hallo!! My name is SbryCbc</h1>;
     }
 } */
-
 
 //-------------- Zweite Unterricht------------//
 
@@ -44,8 +43,7 @@ import Collapse from './components/collapse';
 
 //-------------- Dritte Unterricht------------//
 
-// Props ---> Componentlar arasi veri iletisimini saglar. 
-
+// Props ---> Componentlar arasi veri iletisimini saglar.
 
 /* const App = () => {
 
@@ -69,65 +67,49 @@ import Collapse from './components/collapse';
 //Child Props
 
 const App = () => {
-    return ( 
-        <div>
-            <div className='card-group'>
+  return (
+    <div className="container ">
+      <div className="row ">
+        <div className="card-group w-100 gap-5">
 
+          <div className="col">
             <Collapse href="collapseExample">
-                <Card 
-                    cardTitle="Lebenst-Mitteln" 
-                    cardText="Lorem Ipsum Text 1" 
-                    updatedTime=" Last Updated 1 min age"
-                    image="https://picsum.photos/id/42/200/300"
-                    />
-             </Collapse>
-
-             <Collapse href="collapseExample">
-                <Card 
-                    cardTitle="Sport-Luaf"
-                    cardText="Lorem Ipsum Text 2" 
-                    updatedTime=" Last Updated 2 min age"
-                    image="https://picsum.photos/id/156/200/300"
-                    />
+              <Card
+                cardTitle="Lebenst-Mitteln"
+                cardText="Lorem Ipsum Text 1"
+                updatedTime=" Last Updated 1 min age"
+                image="https://picsum.photos/id/42/200/300"
+              />
             </Collapse>
-
+          </div>
+          <div className="col">
             <Collapse href="collapseExample">
-
-                <Card 
-                    cardTitle="Lauf-Verrückt"
-                    cardText="Lorem Ipsum Text 2" 
-                    updatedTime=" Last Updated 3 min age"
-                    image="https://picsum.photos/id/177/200/300"
-                    />
-             </Collapse>
-          
-            </div>
+              <Card
+                cardTitle="Lauf-Verrückt"
+                cardText="Lorem Ipsum Text 2"
+                updatedTime=" Last Updated 2 min age"
+                image="https://picsum.photos/id/156/200/300"
+              />
+            </Collapse>
+          </div>
+          <div className="col">
+            <Collapse href="collapseExample">
+              <Card
+                cardTitle="Lauf-Verbindung"
+                cardText="Lorem Ipsum Text 3"
+                updatedTime=" Last Updated 3 min age"
+                image="https://picsum.photos/id/27/200/300"
+              />
+            </Collapse>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-    //document.querySelector("#root")   
+  <App />,
+  document.getElementById("root")
+  //document.querySelector("#root")
 );
-
