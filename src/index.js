@@ -75,7 +75,7 @@ const App = () => {
           <div className="col">
             <Collapse href="collapseExample">
               <Card
-                cardTitle="Lebenst-Mitteln"
+                //cardTitle="Lebenst-Mitteln"
                 cardText="Lorem Ipsum Text 1"
                 updatedTime=" Last Updated 1 min age"
                 image="https://picsum.photos/id/42/200/300"
