@@ -23,14 +23,35 @@ class Collapse extends React.Component {
   constructor() {
     super();
     this.state = {
-      showContent: true
+      showContent: false
     };
+
+    /* this.showMore = ()=> {
+       console.log(this)
+    } */
+
+    //this.showMore = this.showMore.bind(this)
+    // Bind---->
   }
+
+   /* showMore(){
+    this.setState(
+      //{showContent: true}
+    )
+  }  */
+
+  showMore = () => {
+    this.setState({showContent: !this.state.showContent})
+
+  }
+
+
   render() {
     return (
       <div>
-        <a className ='btn btn-primary w-100 mb-2 mt-3'>
-          Link with href</a>
+        <button className ="btn btn-primary w-100 mb-2 mt-3" onClick={this.showMore} >
+          Link with href
+          </button>
 
         {
             this.state.showContent ? (
@@ -50,8 +71,13 @@ class Collapse extends React.Component {
 
 
 
-//State---->> O an ki durumdaki bilgilerin ne oldugunu verir..
-//props---->> degistirilemez veriler icin kullanilir...
-//state---->> degistirilebilir veriler icin kullanmaliyiz....
-
+//State ----->> Indicates the current state of the data.
+//Props ----->> Used for immutable data.
+//State ----->> Should be used for mutable data.
+//setState -->> We can use this method to modify state properties since we cannot modify them manually. 'Setstate kullandiktan sonra render() methodu tekrar calistirilir.'
+// first constructor --> state initialization
+// The render method executed for the first time.
+// onClick event fired.
+// setState updated the state object --> triggered render.
+// The render method displays the updated JSX on the page.
 export default Collapse;
