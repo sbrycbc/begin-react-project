@@ -20,11 +20,12 @@ import React from "react";
 }; */
 
 class Collapse extends React.Component {
-  constructor() {
+  /* constructor() {
     super();
     this.state = {
       showContent: false
-    };
+    }; */
+    state = {showContent:false}
 
     /* this.showMore = ()=> {
        console.log(this)
@@ -32,7 +33,7 @@ class Collapse extends React.Component {
 
     //this.showMore = this.showMore.bind(this)
     // Bind---->
-  }
+  //}
 
    /* showMore(){
     this.setState(
@@ -45,19 +46,33 @@ class Collapse extends React.Component {
 
   }
 
+  /* componentDidMount(){
+    
+  }
+
+  componentDidUpdate(){
+    
+  } */
+
 
   render() {
     return (
       <div>
         <button className ="btn btn-primary w-100 mb-2 mt-3" onClick={this.showMore} >
-          Link with href
-          </button>
+
+{/*              {this.props.children.props.cardTitle} */}
+
+             {React.Children.map(this.props.children, children => children.props.cardTitle)}
+        </button>
 
         {
             this.state.showContent ? (
 
             <div className="collapse show">
-            {this.props.children}
+
+{/*             {this.props.children} */}
+
+            {React.Children.map(this.props.children, children => children)}
             </div>
           ): null 
         }
@@ -71,13 +86,19 @@ class Collapse extends React.Component {
 
 
 
-//State ----->> Indicates the current state of the data.
-//Props ----->> Used for immutable data.
-//State ----->> Should be used for mutable data.
-//setState -->> We can use this method to modify state properties since we cannot modify them manually. 'Setstate kullandiktan sonra render() methodu tekrar calistirilir.'
+// State ----->> Indicates the current state of the data.
+// Props ----->> Used for immutable data.
+// State ----->> Should be used for mutable data.
+// setState -->> We can use this method to modify state properties since we cannot modify them manually. 'Setstate kullandiktan sonra render() methodu tekrar calistirilir.'
 // first constructor --> state initialization
 // The render method executed for the first time.
 // onClick event fired.
 // setState updated the state object --> triggered render.
 // The render method displays the updated JSX on the page.
+
+
+
+
+
+
 export default Collapse;
