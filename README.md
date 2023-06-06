@@ -36,4 +36,4 @@ This way, you can run the project on your local environment and start developing
 
 Currently, this repo is solely used for my learning process, but contributions of any kind are welcome. If you find any issues or have suggestions for improvement in the project, please open an issue or submit a pull request.
 
-
+😎️ Have a good time!
